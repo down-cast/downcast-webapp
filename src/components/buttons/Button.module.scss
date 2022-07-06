@@ -1,32 +1,29 @@
 @use "/src/styles/global/variables.scss";
 @use "/src/styles/global/mixins/colors.scss";
+@use "../../styles/global/mixins/effects";
 
 @mixin button {
-  padding: 0 16px;
-  border-radius: variables.$generalBorderRadius;
-  border: none;
+  all: unset;
   cursor: pointer;
   height: variables.$buttonHeight;
-}
-
-@mixin buttonShadow {
-  transition-duration: 100ms;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.117);
+  border-radius: variables.$generalBorderRadius;
+  padding: 0 16px;
 }
 
 .primary {
   @include button;
   background-color: var(--color-primary);
 
+  &:hover {
+    @include effects.elevation1;
+    background-color: var(--color-primary-92);
+  }
+
   .text {
     color: var(--color-on-primary);
   }
-
-  &:hover {
-    @include buttonShadow;
-    background-color: var(--color-primary-8);
-  }
 }
+
 
 .secondary {
   @include button;
@@ -35,22 +32,25 @@
   border-color: var(--color-outline);
   border-style: solid;
 
-  &:hover {
-    @include buttonShadow;
-    background-color: var(--color-primary-8);
-  }
-
   .text {
     color: var(--color-primary);
   }
+
+  &:hover {
+    background-color: var(--color-primary-8);
+  }
+
 }
 
 .textButton {
   @include button;
-  padding: 0;
-  background-color: var(--color-background);
+  padding: 0 12px;
 
   .text {
     color: var(--color-primary);
+  }
+
+  &:hover {
+    background-color: var(--color-primary-8);
   }
 }

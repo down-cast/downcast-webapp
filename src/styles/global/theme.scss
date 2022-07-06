@@ -70,17 +70,21 @@
 @media (prefers-color-scheme: light) {
   .material-theme {
     @include light-theme;
+    @include dColors.derived-light-theme
   }
   .dark-theme {
     @include dark-theme;
+    @include dColors.derived-dark-theme;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .material-theme {
     @include dark-theme;
+    @include dColors.derived-dark-theme;
   }
   .light-theme {
     @include light-theme;
+    @include dColors.derived-light-theme;
   }
 }

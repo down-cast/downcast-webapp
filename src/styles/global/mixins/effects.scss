@@ -1,0 +1,31 @@
+$elevationTransitionDuration: 100ms;
+$shadowColor: rgba(0, 0, 0, 0.4);
+
+@mixin transition {
+  transition-duration: $elevationTransitionDuration;
+}
+
+@mixin elevation1 {
+  @include transition;
+  box-shadow: 0 2px 2px $shadowColor
+}
+
+@mixin elevation2 {
+  @include transition;
+  box-shadow: 0 4px 4px $shadowColor
+}
+
+@mixin elevation3 {
+  @include transition;
+  box-shadow: 0 6px 6px $shadowColor
+}
+
+@mixin elevation4 {
+  @include transition;
+  box-shadow: 0 8px 8px $shadowColor
+}
+
+@mixin elevation5 {
+  @include transition;
+  box-shadow: 0 10px 10px $shadowColor
+}
