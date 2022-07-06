@@ -26,6 +26,7 @@ export const Button: FC<ButtonProps> = (props) => {
       buttonStyle = styles.textButton;
       break;
   }
+  
   return (
     <button className={buttonStyle}>
       <div className={`${styles.text} body-large`}>{props.text}</div>

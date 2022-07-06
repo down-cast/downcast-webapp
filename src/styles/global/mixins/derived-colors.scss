@@ -1,27 +1,132 @@
 @use "colors";
 
-$opacityLevel1: 0.38;
-$opacityLevel2: 0.42;
-$opacityLevel2: 0.56;
+$surface1opacity: 0.05;
+$surface2opacity: 0.08;
+$surface3opacity: 0.11;
+$surface4opacity: 0.12;
+$surface5opacity: 0.14;
+
+$opacity8: 0.08;
+$opacity12: 0.12;
+$opacity16: 0.16;
+
+
+@function adjustOpacity($color, $opacityLevel) {
+  @return rgba($color, $alpha: $opacityLevel);
+}
+
 
 @mixin derived-colors {
-  --color-primary-light-8: adjust-color(
-    var(--color-primary-light),
-    $alpha: -$opacityLevel1
-  );
+  // primary
+  --color-primary-light-8: #{adjustOpacity(colors.$primary-light, $opacity8)};
+  --color-on-primary-light-8: #{adjustOpacity(colors.$on-primary-light, $opacity8)};
+  --color-primary-light-12: #{adjustOpacity(colors.$primary-light, $opacity12)};
+  --color-on-primary-light-12: #{adjustOpacity(colors.$on-primary-light, $opacity12)};
+  --color-primary-light-16: #{adjustOpacity(colors.$primary-light, $opacity16)};
+  --color-on-primary-light-16: #{adjustOpacity(colors.$on-primary-light, $opacity16)};
 
-  --color-on-primary-light-8: adjust-color(
-    var(--color-on-primary-light),
-    $alpha: -$opacityLevel1
-  );
+  --color-primary-dark-8: #{adjustOpacity(colors.$primary-dark, $opacity8)};
+  --color-on-primary-dark-8: #{adjustOpacity(colors.$on-primary-dark, $opacity8)};
+  --color-primary-dark-12: #{adjustOpacity(colors.$primary-dark, $opacity12)};
+  --color-on-primary-dark-12: #{adjustOpacity(colors.$on-primary-dark, $opacity12)};
+  --color-primary-dark-16: #{adjustOpacity(colors.$primary-dark, $opacity16)};
+  --color-on-primary-dark-16: #{adjustOpacity(colors.$on-primary-dark, $opacity16)};
 
-  --color-primary-dark-8: adjust-color(
-    var(--color-primary-dark),
-    $alpha: -$opacityLevel1
-  );
+  // secondary
+  --color-secondary-light-8: #{adjustOpacity(colors.$secondary-light, $opacity8)};
+  --color-on-secondary-light-8: #{adjustOpacity(colors.$on-secondary-light, $opacity8)};
+  --color-secondary-light-12: #{adjustOpacity(colors.$secondary-light, $opacity12)};
+  --color-on-secondary-light-12: #{adjustOpacity(colors.$on-secondary-light, $opacity12)};
+  --color-secondary-light-16: #{adjustOpacity(colors.$secondary-light, $opacity16)};
+  --color-on-secondary-light-16: #{adjustOpacity(colors.$on-secondary-light, $opacity16)};
 
-  --color-on-primary-dark-8: adjust-color(
-    var(--color-on-primary-dark),
-    $alpha: -$opacityLevel1
-  );
+  --color-secondary-dark-8: #{adjustOpacity(colors.$secondary-dark, $opacity8)};
+  --color-on-secondary-dark-8: #{adjustOpacity(colors.$on-secondary-dark, $opacity8)};
+  --color-secondary-dark-12: #{adjustOpacity(colors.$secondary-dark, $opacity12)};
+  --color-on-secondary-dark-12: #{adjustOpacity(colors.$on-secondary-dark, $opacity12)};
+  --color-secondary-dark-16: #{adjustOpacity(colors.$secondary-dark, $opacity16)};
+  --color-on-secondary-dark-16: #{adjustOpacity(colors.$on-secondary-dark, $opacity16)};
+
+  // tertiary
+  --color-tertiary-light-8: #{adjustOpacity(colors.$tertiary-light, $opacity8)};
+  --color-on-tertiary-light-8: #{adjustOpacity(colors.$on-tertiary-light, $opacity8)};
+  --color-tertiary-light-12: #{adjustOpacity(colors.$tertiary-light, $opacity12)};
+  --color-on-tertiary-light-12: #{adjustOpacity(colors.$on-tertiary-light, $opacity12)};
+  --color-tertiary-light-16: #{adjustOpacity(colors.$tertiary-light, $opacity16)};
+  --color-on-tertiary-light-16: #{adjustOpacity(colors.$on-tertiary-light, $opacity16)};
+
+  --color-tertiary-dark-8: #{adjustOpacity(colors.$tertiary-dark, $opacity8)};
+  --color-on-tertiary-dark-8: #{adjustOpacity(colors.$on-tertiary-dark, $opacity8)};
+  --color-tertiary-dark-12: #{adjustOpacity(colors.$tertiary-dark, $opacity12)};
+  --color-on-tertiary-dark-12: #{adjustOpacity(colors.$on-tertiary-dark, $opacity12)};
+  --color-tertiary-dark-16: #{adjustOpacity(colors.$tertiary-dark, $opacity16)};
+  --color-on-tertiary-dark-16: #{adjustOpacity(colors.$on-tertiary-dark, $opacity16)};
+
+  // surface
+  --color-surface-light-1: #{adjustOpacity(colors.$surface-light, $surface1opacity)};
+  --color-surface-light-2: #{adjustOpacity(colors.$surface-light, $surface2opacity)};
+  --color-surface-light-3: #{adjustOpacity(colors.$surface-light, $surface3opacity)};
+  --color-surface-light-4: #{adjustOpacity(colors.$surface-light, $surface4opacity)};
+  --color-surface-light-5: #{adjustOpacity(colors.$surface-light, $surface5opacity)};
+
+  --color-surface-dark-1: #{adjustOpacity(colors.$surface-dark, $surface1opacity)};
+  --color-surface-dark-2: #{adjustOpacity(colors.$surface-dark, $surface2opacity)};
+  --color-surface-dark-3: #{adjustOpacity(colors.$surface-dark, $surface3opacity)};
+  --color-surface-dark-4: #{adjustOpacity(colors.$surface-dark, $surface4opacity)};
+  --color-surface-dark-5: #{adjustOpacity(colors.$surface-dark, $surface5opacity)};
 }
+
+
+@mixin derived-light-theme {
+  --color-primary-8: var(--color-primary-light-8);
+  --color-on-primary-8: var(--color-on-primary-light-8);
+  --color-primary-12: var(--color-primary-light-12);
+  --color-on-primary-12: var(--color-on-primary-light-12);
+  --color-primary-16: var(--color-primary-light-16);
+  --color-on-primary-16: var(--color-on-primary-light-16);
+
+  --color-secondary-8: var(--color-secondary-light-8);
+  --color-on-secondary-8: var(--color-on-secondary-light-8);
+  --color-secondary-12: var(--color-secondary-light-12);
+  --color-on-secondary-12: var(--color-on-secondary-light-12);
+  --color-secondary-16: var(--color-secondary-light-16);
+  --color-on-secondary-16: var(--color-on-secondary-light-16);
+
+  --color-tertiary-8: var(--color-tertiary-light-8);
+  --color-on-tertiary-8: var(--color-on-tertiary-light-8);
+  --color-tertiary-12: var(--color-tertiary-light-12);
+  --color-on-tertiary-12: var(--color-on-tertiary-light-12);
+  --color-tertiary-16: var(--color-tertiary-light-16);
+  --color-on-tertiary-16: var(--color-on-tertiary-light-16);
+
+  --color-surface-1: var(--color-surface-1);
+  --color-surface-2: var(--color-surface-2);
+  --color-surface-3: var(--color-surface-3);
+  --color-surface-4: var(--color-surface-4);
+  --color-surface-5: var(--color-surface-5);
+}
+
+@mixin derived-dark-theme {
+  --color-primary-8: var(--color-primary-dark-8);
+  --color-on-primary-8: var(--color-on-primary-dark-8);
+  --color-primary-12: var(--color-primary-dark-12);
+  --color-on-primary-12: var(--color-on-primary-dark-12);
+  --color-primary-16: var(--color-primary-dark-16);
+  --color-on-primary-16: var(--color-on-primary-dark-16);
+
+  --color-secondary-8: var(--color-secondary-dark-8);
+  --color-on-secondary-8: var(--color-on-secondary-dark-8);
+  --color-secondary-12: var(--color-secondary-dark-12);
+  --color-on-secondary-12: var(--color-on-secondary-dark-12);
+  --color-secondary-16: var(--color-secondary-dark-16);
+  --color-on-secondary-16: var(--color-on-secondary-dark-16);
+
+  --color-tertiary-8: var(--color-tertiary-dark-8);
+  --color-on-tertiary-8: var(--color-on-tertiary-dark-8);
+  --color-tertiary-12: var(--color-tertiary-dark-12);
+  --color-on-tertiary-12: var(--color-on-tertiary-dark-12);
+  --color-tertiary-16: var(--color-tertiary-dark-16);
+  --color-on-tertiary-16: var(--color-on-tertiary-dark-16);
+}
+
+

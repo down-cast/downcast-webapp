@@ -16,7 +16,7 @@ class DowncastDocument extends Document {
                         rel="stylesheet"
                     />
                 </Head>
-                <body className="material-theme light-theme">
+                <body className="material-theme">
                 <Main/>
                 <NextScript/>
                 </body>

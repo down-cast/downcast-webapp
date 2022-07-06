@@ -1,7 +1,7 @@
-@use "/src/styles/global/variables";
+@use "/src/styles/global/variables.scss";
+@use "/src/styles/global/mixins/colors.scss";
 
 @mixin button {
-  all: unset;
   padding: 0 16px;
   border-radius: variables.$generalBorderRadius;
   border: none;
@@ -23,8 +23,8 @@
   }
 
   &:hover {
-    background-color: var(--color-on-primary-8);
     @include buttonShadow;
+    background-color: var(--color-primary-8);
   }
 }
 
@@ -37,6 +37,7 @@
 
   &:hover {
     @include buttonShadow;
+    background-color: var(--color-primary-8);
   }
 
   .text {
