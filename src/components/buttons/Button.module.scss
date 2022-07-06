@@ -1,0 +1,55 @@
+@use "/src/styles/variables";
+
+@mixin button {
+  all: unset;
+  padding: 0 16px;
+  border-radius: variables.$generalBorderRadius;
+  border: none;
+  cursor: pointer;
+  height: variables.$buttonHeight;
+}
+
+@mixin buttonShadow {
+  transition-duration: 100;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.117);
+}
+
+.primary {
+  @include button;
+  background-color: var(--color-primary);
+
+  .text {
+    color: var(--color-on-primary);
+  }
+
+  &:hover {
+    background-color: rgba($color: var(--color-primary), $alpha: 0.08);
+    @include buttonShadow;
+  }
+}
+
+.secondary {
+  @include button;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: var(--color-outline);
+  border-style: solid;
+
+  &:hover {
+    @include buttonShadow;
+  }
+
+  .text {
+    color: var(--color-primary);
+  }
+}
+
+.textButton {
+  @include button;
+  padding: 0;
+  background-color: var(--color-background);
+
+  .text {
+    color: var(--color-primary);
+  }
+}

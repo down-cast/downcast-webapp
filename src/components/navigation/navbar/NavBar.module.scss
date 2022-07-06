@@ -1,0 +1,21 @@
+@use "/src/styles/variables.scss";
+
+.navBar {
+  display: flex;
+  align-items: center;
+  width: variables.$contentWidth;
+  height: variables.$navBarHeight;
+  justify-content: space-between;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.navItems {
+  display: flex;
+  gap: 36px;
+}
+
+.rightItems {
+  display: flex ;
+  gap: 16px;
+}
