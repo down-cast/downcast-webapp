@@ -1,4 +1,4 @@
-@use "/src/styles/variables";
+@use "/src/styles/global/variables";
 
 @mixin button {
   all: unset;
@@ -10,7 +10,7 @@
 }
 
 @mixin buttonShadow {
-  transition-duration: 100;
+  transition-duration: 100ms;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.117);
 }
 
@@ -23,7 +23,7 @@
   }
 
   &:hover {
-    background-color: rgba($color: var(--color-primary), $alpha: 0.08);
+    background-color: var(--color-on-primary-8);
     @include buttonShadow;
   }
 }

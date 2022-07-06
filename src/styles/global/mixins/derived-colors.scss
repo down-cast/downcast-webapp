@@ -1,0 +1,27 @@
+@use "colors";
+
+$opacityLevel1: 0.38;
+$opacityLevel2: 0.42;
+$opacityLevel2: 0.56;
+
+@mixin derived-colors {
+  --color-primary-light-8: adjust-color(
+    var(--color-primary-light),
+    $alpha: -$opacityLevel1
+  );
+
+  --color-on-primary-light-8: adjust-color(
+    var(--color-on-primary-light),
+    $alpha: -$opacityLevel1
+  );
+
+  --color-primary-dark-8: adjust-color(
+    var(--color-primary-dark),
+    $alpha: -$opacityLevel1
+  );
+
+  --color-on-primary-dark-8: adjust-color(
+    var(--color-on-primary-dark),
+    $alpha: -$opacityLevel1
+  );
+}
