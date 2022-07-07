@@ -67,17 +67,17 @@ $opacity84: 0.84;
   --color-on-tertiary-dark-16: #{adjustOpacity(colors.$on-tertiary-dark, $opacity16)};
 
   // surface
-  --color-surface-light-1: #{adjustOpacity(colors.$surface-light, $surface1opacity)};
-  --color-surface-light-2: #{adjustOpacity(colors.$surface-light, $surface2opacity)};
-  --color-surface-light-3: #{adjustOpacity(colors.$surface-light, $surface3opacity)};
-  --color-surface-light-4: #{adjustOpacity(colors.$surface-light, $surface4opacity)};
-  --color-surface-light-5: #{adjustOpacity(colors.$surface-light, $surface5opacity)};
+  --color-surface-light-1: #{adjustOpacity(colors.$primary-light, $surface1opacity)};
+  --color-surface-light-2: #{adjustOpacity(colors.$primary-light, $surface2opacity)};
+  --color-surface-light-3: #{adjustOpacity(colors.$primary-light, $surface3opacity)};
+  --color-surface-light-4: #{adjustOpacity(colors.$primary-light, $surface4opacity)};
+  --color-surface-light-5: #{adjustOpacity(colors.$primary-light, $surface5opacity)};
 
-  --color-surface-dark-1: #{adjustOpacity(colors.$surface-dark, $surface1opacity)};
-  --color-surface-dark-2: #{adjustOpacity(colors.$surface-dark, $surface2opacity)};
-  --color-surface-dark-3: #{adjustOpacity(colors.$surface-dark, $surface3opacity)};
-  --color-surface-dark-4: #{adjustOpacity(colors.$surface-dark, $surface4opacity)};
-  --color-surface-dark-5: #{adjustOpacity(colors.$surface-dark, $surface5opacity)};
+  --color-surface-dark-1: #{adjustOpacity(colors.$primary-dark, $surface1opacity)};
+  --color-surface-dark-2: #{adjustOpacity(colors.$primary-dark, $surface2opacity)};
+  --color-surface-dark-3: #{adjustOpacity(colors.$primary-dark, $surface3opacity)};
+  --color-surface-dark-4: #{adjustOpacity(colors.$primary-dark, $surface4opacity)};
+  --color-surface-dark-5: #{adjustOpacity(colors.$primary-dark, $surface5opacity)};
 
   // primary dimmed
   --color-primary-light-92: #{adjustOpacity(colors.$primary-light, $opacity92)};
@@ -148,12 +148,6 @@ $opacity84: 0.84;
   --color-tertiary-16: var(--color-tertiary-light-16);
   --color-on-tertiary-16: var(--color-on-tertiary-light-16);
 
-  --color-surface-1: var(--color-surface-1);
-  --color-surface-2: var(--color-surface-2);
-  --color-surface-3: var(--color-surface-3);
-  --color-surface-4: var(--color-surface-4);
-  --color-surface-5: var(--color-surface-5);
-
   --color-primary-92: var(--color-primary-light-92);
   --color-on-primary-92: var(--color-on-primary-light-92);
   --color-primary-88: var(--color-primary-light-88);
@@ -174,6 +168,12 @@ $opacity84: 0.84;
   --color-on-tertiary-88: var(--color-on-tertiary-light-88);
   --color-tertiary-84: var(--color-tertiary-light-84);
   --color-on-tertiary-84: var(--color-on-tertiary-light-84);
+
+  --color-surface-1: var(--color-surface-light-1);
+  --color-surface-2: var(--color-surface-light-2);
+  --color-surface-3: var(--color-surface-light-3);
+  --color-surface-4: var(--color-surface-light-4);
+  --color-surface-5: var(--color-surface-light-5);
 }
 
 @mixin derived-dark-theme {
@@ -218,4 +218,10 @@ $opacity84: 0.84;
   --color-on-tertiary-88: var(--color-on-tertiary-dark-88);
   --color-tertiary-84: var(--color-tertiary-dark-84);
   --color-on-tertiary-84: var(--color-on-tertiary-dark-84);
+
+  --color-surface-1: var(--color-surface-dark-1);
+  --color-surface-2: var(--color-surface-dark-2);
+  --color-surface-3: var(--color-surface-dark-3);
+  --color-surface-4: var(--color-surface-dark-4);
+  --color-surface-5: var(--color-surface-dark-5);
 }

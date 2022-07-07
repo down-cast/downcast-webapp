@@ -4,7 +4,7 @@ import styles from "./Button.module.scss";
 enum ButtonType {
     primary,
     secondary,
-    text,
+    text
 }
 
 interface ButtonProps {
@@ -15,16 +15,12 @@ interface ButtonProps {
 
 export const Button: FC<ButtonProps> = (props) => {
     let buttonStyle;
-    switch (props.type) {
-        case ButtonType.primary:
-            buttonStyle = styles.primary;
-            break;
-        case ButtonType.secondary:
-            buttonStyle = styles.secondary;
-            break;
-        case ButtonType.text:
-            buttonStyle = styles.textButton;
-            break;
+    if (props.type === ButtonType.primary) {
+        buttonStyle = styles.primary;
+    } else if (props.type === ButtonType.secondary) {
+        buttonStyle = styles.secondary;
+    } else if (props.type === ButtonType.text) {
+        buttonStyle = styles.textButton;
     }
 
     return (

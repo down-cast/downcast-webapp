@@ -1,0 +1,14 @@
+.navItem {
+  padding: 4px 8px;
+  color: var(--color-on-secondary-container);
+  border-radius: 8px;
+  cursor: pointer;
+  &:hover {
+    color: var(--color-on-secondary-container);
+    background-color: var(--color-secondary-container);
+  }
+}
+
+.active {
+  background-color: var(--color-secondary-container);
+}

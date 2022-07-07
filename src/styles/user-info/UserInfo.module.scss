@@ -1,0 +1,11 @@
+@use "src/styles/global/mixins/content";
+
+.content {
+  @include content.pageContainer;
+  display: flex;
+  gap: 36px;
+}
+
+.cardSections {
+
+}

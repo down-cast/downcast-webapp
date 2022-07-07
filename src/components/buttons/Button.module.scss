@@ -24,7 +24,6 @@
   }
 }
 
-
 .secondary {
   @include button;
   background-color: transparent;
@@ -39,7 +38,6 @@
   &:hover {
     background-color: var(--color-primary-8);
   }
-
 }
 
 .textButton {

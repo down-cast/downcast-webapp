@@ -1,0 +1,9 @@
+@use "../variables";
+
+@mixin pageContainer {
+  display: flex;
+  min-width: variables.$tabletBreakpoint;
+  max-width: variables.$contentWidth;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
