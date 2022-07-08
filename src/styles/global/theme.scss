@@ -29,6 +29,7 @@
   --color-on-surface-variant: var(--color-on-surface-variant-light);
   --color-inverse-surface: var(--color-inverse-surface-light);
   --color-inverse-on-surface: var(--color-inverse-on-surface-light);
+  --color-shadow: var(--color-shadow-light);
 }
 
 @mixin dark-theme {
@@ -58,6 +59,7 @@
   --color-on-surface-variant: var(--color-on-surface-variant-dark);
   --color-inverse-surface: var(--color-inverse-surface-dark);
   --color-inverse-on-surface: var(--color-inverse-on-surface-dark);
+  --color-shadow: var(--color-shadow-dark);
 }
 
 

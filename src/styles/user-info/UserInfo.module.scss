@@ -7,5 +7,7 @@
 }
 
 .cardSections {
-
+  display: flex;
+  gap: 48px;
+  flex-direction: column;
 }

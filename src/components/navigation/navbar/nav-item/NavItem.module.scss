@@ -3,6 +3,9 @@
   color: var(--color-on-secondary-container);
   border-radius: 8px;
   cursor: pointer;
+  background-color: var(--color-on-secondary-16);
+  backdrop-filter: blur(40px);
+
   &:hover {
     color: var(--color-on-secondary-container);
     background-color: var(--color-secondary-container);

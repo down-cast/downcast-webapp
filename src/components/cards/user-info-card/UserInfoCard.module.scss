@@ -12,6 +12,8 @@
   width: 320px;
   align-items: center;
   height: fit-content;
+  position: sticky;
+  top: variables.$navBarHeight + 32px;
 }
 
 .image {
@@ -36,6 +38,7 @@
 .social {
   display: flex;
   gap: 24px;
+  color: var(--color-on-surface)
 }
 
 .likes {
