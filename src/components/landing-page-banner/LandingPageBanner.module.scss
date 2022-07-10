@@ -1,0 +1,33 @@
+@use "src/styles/global/variables";
+@use "src/styles/global/mixins/content";
+
+.banner {
+  height: variables.$landingPageBannerHeight;
+  background-color: var(--color-primary-container);
+  border-bottom: 1px solid var(--color-outline);
+  flex: 0 0 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 768px;
+  color: var(--color-on-primary-container);
+  justify-content: center;
+}
+
+.container {
+  @include content.pageContainer;
+  justify-content: space-between;
+}
+
+
+.title, .subtitle {
+  margin: 0;
+}
+
+.logo {
+  font-size: 240px;
+}
+

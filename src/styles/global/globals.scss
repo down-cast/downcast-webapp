@@ -6,6 +6,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: "DM Sans", sans-serif;
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
 }
 
 ul {
@@ -19,4 +24,5 @@ a {
 
 * {
   box-sizing: border-box;
+  color: var(--color-on-background);
 }

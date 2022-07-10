@@ -15,8 +15,8 @@ const Footer: FC = () => {
                 <section className={styles.section}>
                     <h5 className={classNames(styles.title, "headline5")}>Newsletter</h5>
                     <span className={"body-large"}>Receive the latest articles each month</span>
-                    <div>
-                        <input placeholder={"Email"}></input>
+                    <div className={styles.inputAndButton}>
+                        <input className={classNames(styles.textInput, "body-large")} placeholder={"Email"}></input>
                         <Button type={ButtonType.primary} text={"Subscribe"}/>
                     </div>
                 </section>
