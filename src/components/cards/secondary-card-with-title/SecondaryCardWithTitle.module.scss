@@ -1,0 +1,15 @@
+@use "src/styles/global/variables";
+
+.card {
+  background-color: var(--color-surface-1);
+  border-radius: variables.$generalBorderRadius;
+  color: var(--color-on-secondary-container);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+}

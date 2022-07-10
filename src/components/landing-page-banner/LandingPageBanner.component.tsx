@@ -13,7 +13,6 @@ export const LandingPageBanner: FC = () => {
                 </p>
             </div>
             <span className={classNames(styles.logo)}>&lt;/&gt; </span>
-
         </div>
     </div>
 }

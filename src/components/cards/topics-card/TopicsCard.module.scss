@@ -1,0 +1,20 @@
+@use "src/styles/global/variables";
+
+.topics {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+}
+
+.topic {
+  color: var(--color-on-secondary-container);
+  background-color: var(--color-secondary-container);
+  border-radius: variables.$generalBorderRadius;
+  padding: 8px;
+  width: max-content;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-secondary-container-84);
+  }
+}

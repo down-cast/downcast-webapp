@@ -1,0 +1,21 @@
+@use "src/styles/global/mixins/content";
+
+
+.content {
+  @include content.pageContainer;
+  gap: 36px;
+}
+
+.primaryColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.secondaryColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-shrink: 0;
+  width: 320px;
+}

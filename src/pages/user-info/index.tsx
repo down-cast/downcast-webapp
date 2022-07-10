@@ -4,7 +4,7 @@ import {UserInfoCard} from "../../components/cards/user-info-card/UserInfoCard.c
 import {CardSection} from "../../components/cards/card-section/CardSection.component";
 import {ArticleCard, ArticleCardProps} from "../../components/cards/article-card/ArticleCard.component";
 
-const cards: ArticleCardProps[] = [
+export const DummyCards: ArticleCardProps[] = [
     {
         author: "John doe",
         date: new Date(Date.now()),
@@ -50,10 +50,10 @@ const UserInfo: NextPage = () => {
             <UserInfoCard name={"John Doe"}></UserInfoCard>
             <div className={styles.cardSections}>
                 <CardSection title={"Latest Articles"} cards={
-                    cards.map(card => <ArticleCard key={card.imageUri} {...card} />)
+                    DummyCards.map(card => <ArticleCard key={card.imageUri} {...card} />)
                 }></CardSection>
                 <CardSection title={"Latest Guides"} cards={
-                    cards.map(card => <ArticleCard key={card.imageUri} {...card} />)
+                    DummyCards.map(card => <ArticleCard key={card.imageUri} {...card} />)
                 }></CardSection>
             </div>
         </div>
