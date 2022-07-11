@@ -1,8 +1,14 @@
 import "../styles/global/globals.scss";
 import type {AppProps} from "next/app";
-import {Layout} from "../components/Layout.component";
+import {Page} from "../utils/PageWithLayout";
+import {Fragment} from "react";
 
-function DowncastApp({Component, pageProps}: AppProps) {
+type Props = AppProps & {
+    Component: Page
+}
+
+function DowncastApp({Component, pageProps}: Props) {
+    const Layout = Component.layout ?? Fragment
     return <Layout>
         <Component {...pageProps} />
     </Layout>

@@ -1,6 +1,4 @@
 import type {NextPage} from "next";
-import Footer from "../components/navigation/footer/Footer.component";
-import NavBar from "../components/navigation/navbar/NavBar.component";
 import styles from "../styles/Home.module.scss";
 import {LandingPageBanner} from "../components/landing-page-banner/LandingPageBanner.component";
 import {CardSection} from "../components/cards/card-section/CardSection.component";
@@ -8,6 +6,11 @@ import {ArticleCard} from "../components/cards/article-card/ArticleCard.componen
 import {DummyCards} from "./user-info";
 import {TopicsCard} from "../components/cards/topics-card/TopicsCard.component";
 import {ContributorsCard, ContributorsProps} from "../components/cards/contributors-card/ContributorsCard.component";
+import {Page} from "../utils/PageWithLayout";
+import {Component} from "react";
+import {
+    LayoutWithNavAndFooter
+} from "../components/layouts/layout-with-nav-and-footer/LayoutWithNavAndFooter.component";
 
 const topics: string[] = [
     "Cloud",
@@ -62,7 +65,7 @@ const contributors: ContributorsProps = {
     ]
 }
 
-const Home: NextPage = () => {
+const Home: Page = () => {
     return (
         <>
             <LandingPageBanner></LandingPageBanner>
@@ -85,5 +88,7 @@ const Home: NextPage = () => {
         </>
     );
 };
+
+Home.layout = LayoutWithNavAndFooter
 
 export default Home;

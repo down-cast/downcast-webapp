@@ -39,7 +39,7 @@ const Contributor: FC<ContributorProps> = (props) => {
         <div className={styles.info}>
             <h3 className={classNames(styles.name, "subhead1")}>{props.name}</h3>
             <p className={classNames(styles.subInfo, "body-medium")}>
-                {`${props.nrOfArticles} Articles  ª  ${props.likes} Likes`}
+                {`${props.nrOfArticles} Articles  *  ${props.likes} Likes`}
             </p>
         </div>
     </li>

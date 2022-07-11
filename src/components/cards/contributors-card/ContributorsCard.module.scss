@@ -9,12 +9,13 @@
 
 .contributor {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   background-color: var(--color-surface-variant);
   color: var(--color-on-surface-variant);
   padding: 16px;
   border-radius: variables.$generalBorderRadius;
   cursor: pointer;
+  align-items: center;
   .info {
     display: flex;
     flex-direction: column;

@@ -3,6 +3,11 @@ import styles from "/src/styles/user-info/UserInfo.module.scss"
 import {UserInfoCard} from "../../components/cards/user-info-card/UserInfoCard.component";
 import {CardSection} from "../../components/cards/card-section/CardSection.component";
 import {ArticleCard, ArticleCardProps} from "../../components/cards/article-card/ArticleCard.component";
+import {Page} from "../../utils/PageWithLayout";
+import {
+    LayoutWithNavAndFooter
+} from "../../components/layouts/layout-with-nav-and-footer/LayoutWithNavAndFooter.component";
+import Home from "../index";
 
 export const DummyCards: ArticleCardProps[] = [
     {
@@ -44,7 +49,7 @@ export const DummyCards: ArticleCardProps[] = [
 ]
 
 
-const UserInfo: NextPage = () => {
+const UserInfo: Page = () => {
     return (
         <div className={styles.content}>
             <UserInfoCard name={"John Doe"}></UserInfoCard>
@@ -59,5 +64,7 @@ const UserInfo: NextPage = () => {
         </div>
     );
 };
+
+UserInfo.layout = LayoutWithNavAndFooter
 
 export default UserInfo;

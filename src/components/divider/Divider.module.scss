@@ -1,0 +1,19 @@
+.divider {
+  color: var(--color-outline);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+  height: 24px;
+}
+
+.line {
+  flex: 1;
+  background-color: var(--color-outline);
+  height: 1px;
+}
+
+
+.text {
+  margin: 0;
+}

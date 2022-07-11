@@ -2,20 +2,17 @@ import {FC} from "react";
 import styles from "./UserInfoCard.module.scss"
 import Image from "next/image";
 import classNames from "classnames";
+import Facebook from "/public/assets/icons/social/facebook.svg";
+import Twitter from "/public/assets/icons/social/twitter.svg";
+import Linkedin from "/public/assets/icons/social/linkedin.svg";
+import Email from "/public/assets/icons/social/email.svg";
+import Github from "/public/assets/icons/social/github.svg";
 
 interface UserInfoCardProps {
     name: string
 }
 
 export const UserInfoCard: FC<UserInfoCardProps> = (props) => {
-    const socialIconsSources = [
-        "/assets/icons/social/facebook.svg",
-        "/assets/icons/social/github.svg",
-        "/assets/icons/social/linkedin.svg",
-        "/assets/icons/social/twitter.svg",
-        "/assets/icons/social/email.svg",
-    ]
-
     return <div className={styles.card}>
         <div className={styles.image}>
             <Image
@@ -30,9 +27,11 @@ export const UserInfoCard: FC<UserInfoCardProps> = (props) => {
                 {props.name}
             </div>
             <div className={styles.social}>
-                {socialIconsSources.map((src) => {
-                    return <Image key={src} src={src} width={24} height={24}/>;
-                })}
+                <Facebook style={{fill: "var(--color-on-surface)"}}/>
+                <Github style={{fill: "var(--color-on-surface)"}}/>
+                <Linkedin style={{fill: "var(--color-on-surface)"}}/>
+                <Twitter style={{fill: "var(--color-on-surface)"}}/>
+                <Email style={{fill: "var(--color-on-surface)"}}/>
             </div>
             <div className={styles.likes}>200+ likes</div>
         </div>

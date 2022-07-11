@@ -153,6 +153,13 @@ $opacity84: 0.84;
   --color-on-surface-variant-light-88: #{adjustOpacity(colors.$on-surface-variant-light, $opacity88)};
   --color-surface-variant-light-84: #{adjustOpacity(colors.$surface-variant-light, $opacity84)};
   --color-on-surface-variant-light-84: #{adjustOpacity(colors.$on-surface-variant-light, $opacity84)};
+
+  // background opacity
+  --color-background-dark-92: #{adjustOpacity(colors.$background-dark, $opacity92)};
+  --color-background-dark-16: #{adjustOpacity(colors.$background-dark, $opacity16)};
+
+  --color-background-light-92: #{adjustOpacity(colors.$background-light, $opacity92)};
+  --color-background-light-16: #{adjustOpacity(colors.$background-light, $opacity16)};
 }
 
 
@@ -218,6 +225,10 @@ $opacity84: 0.84;
   --color-surface-3: var(--color-surface-light-3);
   --color-surface-4: var(--color-surface-light-4);
   --color-surface-5: var(--color-surface-light-5);
+
+  --color-background-92: var(--color-background-light-92);
+  --color-background-16: var(--color-background-light-16);
+
 }
 
 @mixin derived-dark-theme {
@@ -282,4 +293,7 @@ $opacity84: 0.84;
   --color-surface-3: var(--color-surface-dark-3);
   --color-surface-4: var(--color-surface-dark-4);
   --color-surface-5: var(--color-surface-dark-5);
+
+  --color-background-92: var(--color-background-dark-92);
+  --color-background-16: var(--color-background-dark-16);
 }

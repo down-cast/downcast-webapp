@@ -1,0 +1,16 @@
+@use "variables";
+
+.textInput {
+  all: unset;
+  box-sizing: border-box;
+  height: variables.$textInputHeight;
+  border-radius: 4px;
+  border: 1px solid var(--color-outline);
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface-variant);
+  padding: 0 8px;
+
+  &:focus {
+    border: 1px solid var(--color-primary);
+  }
+}

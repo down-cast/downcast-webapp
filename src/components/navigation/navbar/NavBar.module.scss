@@ -1,11 +1,18 @@
 @use "/src/styles/global/mixins/content.scss";
 @use "/src/styles/global/variables.scss";
+@use "src/styles/global/mixins/colors.scss";
 
 .background {
+  background: linear-gradient(to bottom, var(--color-background-92) 0%, var(--color-background-16) 100%); /* W3C */
   backdrop-filter: blur(40px);
   position: sticky;
   top: 0;
   z-index: 3;
+  transition-duration: 200ms;
+}
+
+.scrolled {
+  box-shadow: 0 3px 8px var(--color-shadow);
 }
 
 .navBar {
@@ -26,4 +33,5 @@
 .rightItems {
   display: flex;
   gap: 16px;
+  align-items: center;
 }

@@ -5,9 +5,12 @@
 @mixin button {
   all: unset;
   cursor: pointer;
+  box-sizing: border-box;
   height: variables.$buttonHeight;
   border-radius: variables.$generalBorderRadius;
   padding: 0 16px;
+  justify-content: center;
+  justify-items: center;
 }
 
 .primary {
@@ -21,6 +24,8 @@
 
   .text {
     color: var(--color-on-primary);
+    width: max-content;
+    margin: 0 auto;
   }
 }
 
@@ -41,14 +46,19 @@
 }
 
 .textButton {
-  @include button;
-  padding: 0 12px;
+  all: unset;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0;
 
   .text {
     color: var(--color-primary);
+
+    &:hover {
+      color: var(--color-primary-84);
+    }
   }
 
-  &:hover {
-    background-color: var(--color-primary-8);
-  }
+
 }

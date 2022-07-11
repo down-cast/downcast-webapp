@@ -11,6 +11,8 @@ interface ButtonProps {
     type: ButtonType;
     text: string;
     iconPath?: string;
+    height?: string
+    width?: string
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -24,7 +26,10 @@ export const Button: FC<ButtonProps> = (props) => {
     }
 
     return (
-        <button className={buttonStyle}>
+        <button className={buttonStyle} style={{
+            width: props.width,
+            height: props.height
+        }}>
             <div className={`${styles.text} body-large`}>
                 {props.text}
             </div>
