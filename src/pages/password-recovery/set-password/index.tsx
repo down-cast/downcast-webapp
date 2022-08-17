@@ -3,6 +3,8 @@ import {SigninSignupLayout} from "../../../components/layouts/signin-signup-layo
 import styles from "../../../styles/password-recovery/PasswordRecovery.module.scss";
 import classNames from "classnames";
 import ButtonType, {Button} from "../../../components/buttons/Button.component";
+import {PasswordValidator} from "../../../components/password-validator/PasswordValidator.component";
+
 
 export const SetPassword: Page = () => {
     return <div className={styles.content}>
@@ -10,7 +12,7 @@ export const SetPassword: Page = () => {
         <span className={classNames(styles.description, "body-large")}>
             Define a new password
         </span>
-        <input className={styles.input} placeholder={"Code"}></input>
+        <PasswordValidator></PasswordValidator>
         <Button width={"100%"} type={ButtonType.primary} text={"Confirm"}/>
     </div>
 }

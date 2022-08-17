@@ -8,9 +8,7 @@ interface DividerProps {
 }
 
 export const Divider: FC<DividerProps> = ({text}) => {
-
     let divider: ReactNode;
-
     if (text) {
         divider = <>
             <div className={styles.line}/>
