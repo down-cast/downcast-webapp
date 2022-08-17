@@ -2,7 +2,7 @@ import {FC, PropsWithChildren} from "react";
 import styles from "./SigninSignupLayout.module.scss";
 import classNames from "classnames";
 
-export const SigninSignupLayout: FC<PropsWithChildren> = ({children}) => {
+export const SignInSignUpLayout: FC<PropsWithChildren> = ({children}) => {
     return <div className={styles.layout}>
         <div className={styles.content}>
             <div className={styles.leftSide}>

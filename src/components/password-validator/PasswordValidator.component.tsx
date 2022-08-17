@@ -15,6 +15,7 @@ export function PasswordValidator() {
         <input className={styles.input}
                placeholder={"Password"}
                inputMode={"text"}
+               type={"password"}
                onChange={event => setPassword(event.target.value)}/>
         <div className={styles.requirements}>
             {Array.from(requirements.keys()).map(text => {

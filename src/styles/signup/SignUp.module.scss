@@ -1,0 +1,34 @@
+@use "src/styles/global/inputs";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 320px;
+}
+
+.input {
+  @extend .textInput;
+  width: 100%;
+}
+
+.title {
+  margin: 0 0 8px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.socialLink {
+  fill: var(--color-on-surface);
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.termsAndPolicy {
+  text-align: center;
+}

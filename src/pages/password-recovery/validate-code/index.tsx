@@ -1,5 +1,5 @@
 import {Page} from "../../../utils/PageWithLayout";
-import {SigninSignupLayout} from "../../../components/layouts/signin-signup-layout/SigninSignupLayout.component";
+import {SignInSignUpLayout} from "../../../components/layouts/signin-signup-layout/SigninSignupLayout.component";
 import styles from "../../../styles/password-recovery/PasswordRecovery.module.scss";
 import classNames from "classnames";
 import ButtonType, {Button} from "../../../components/buttons/Button.component";
@@ -15,6 +15,6 @@ export const PwRecoveryValidate: Page = () => {
     </div>
 }
 
-PwRecoveryValidate.layout = SigninSignupLayout;
+PwRecoveryValidate.layout = SignInSignUpLayout;
 
 export default PwRecoveryValidate;

@@ -1,6 +1,6 @@
 import {Page} from "../../utils/PageWithLayout";
-import {SigninSignupLayout} from "../../components/layouts/signin-signup-layout/SigninSignupLayout.component";
-import styles from "../../styles/login/Login.module.scss";
+import {SignInSignUpLayout} from "../../components/layouts/signin-signup-layout/SigninSignupLayout.component";
+import styles from "../../styles/signin/SignIn.module.scss";
 import classNames from "classnames";
 import ButtonType, {Button} from "../../components/buttons/Button.component";
 import {Divider} from "../../components/divider/Divider.component";
@@ -8,7 +8,7 @@ import Facebook from "/public/assets/icons/social/facebook_round.svg";
 import Google from "/public/assets/icons/social/google.svg";
 
 
-const Login: Page = () => {
+const SignIn: Page = () => {
     return <div className={styles.content}>
         <h3 className={classNames(styles.title, "headline2")}>Welcome</h3>
         <input className={styles.input} placeholder={"Email"}></input>
@@ -22,11 +22,10 @@ const Login: Page = () => {
             <Facebook className={styles.socialLink}/>
             <Google className={styles.socialLink}/>
         </div>
-
     </div>
 }
 
-Login.layout = SigninSignupLayout
+SignIn.layout = SignInSignUpLayout
 
 
-export default Login;
+export default SignIn;
