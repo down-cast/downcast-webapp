@@ -4,14 +4,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--color-on-surface);
   gap: 16px;
+  width: 320px;
 }
 
 .input {
   @extend .textInput;
-  width: 320px;
+  width: 100%;
 }
+
 .title {
   margin: 0 0 16px;
 }
@@ -21,8 +22,17 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 8px;
+  width: 100%;
 }
 
-.button {
-  width: 100%;
+.socialLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.socialLink {
+  fill: var(--color-on-surface);
+  display: inline-block;
+  width: 32px;
+  height: 32px;
 }

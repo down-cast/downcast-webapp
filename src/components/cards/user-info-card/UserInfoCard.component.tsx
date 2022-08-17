@@ -27,11 +27,11 @@ export const UserInfoCard: FC<UserInfoCardProps> = (props) => {
                 {props.name}
             </div>
             <div className={styles.social}>
-                <Facebook style={{fill: "var(--color-on-surface)"}}/>
-                <Github style={{fill: "var(--color-on-surface)"}}/>
-                <Linkedin style={{fill: "var(--color-on-surface)"}}/>
-                <Twitter style={{fill: "var(--color-on-surface)"}}/>
-                <Email style={{fill: "var(--color-on-surface)"}}/>
+                <Facebook width={24} heigth={24} style={{fill: "var(--color-on-surface)"}}/>
+                <Github width={24} heigth={24} style={{fill: "var(--color-on-surface)"}}/>
+                <Linkedin width={24} heigth={24} style={{fill: "var(--color-on-surface)"}}/>
+                <Twitter width={24} heigth={24} style={{fill: "var(--color-on-surface)"}}/>
+                <Email width={24} heigth={24} style={{fill: "var(--color-on-surface)"}}/>
             </div>
             <div className={styles.likes}>200+ likes</div>
         </div>

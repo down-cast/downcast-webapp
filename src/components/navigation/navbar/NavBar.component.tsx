@@ -30,12 +30,11 @@ class NavBar extends Component<{}, { scrolled: boolean }> {
     componentDidMount() {
         super.componentDidMount?.();
         window.addEventListener('scroll', this.handleScroll);
-
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
         super.componentWillUnmount?.();
+        window.removeEventListener('scroll', this.handleScroll);
     }
 
     render() {
@@ -43,7 +42,8 @@ class NavBar extends Component<{}, { scrolled: boolean }> {
             <div className={classNames(styles.background,
                 this.state.scrolled && styles.scrolled)}>
                 <nav className={styles.navBar}>
-                    <div className="headline3" style={{color: "var(--color-on-background)"}}>
+                    <div className="headline3"
+                         style={{color: "var(--color-on-background)"}}>
                         LOGO
                     </div>
                     <ul className={styles.navItems}>

@@ -4,6 +4,9 @@ import styles from "../../styles/login/Login.module.scss";
 import classNames from "classnames";
 import ButtonType, {Button} from "../../components/buttons/Button.component";
 import {Divider} from "../../components/divider/Divider.component";
+import Facebook from "/public/assets/icons/social/facebook_round.svg";
+import Google from "/public/assets/icons/social/google.svg";
+
 
 const Login: Page = () => {
     return <div className={styles.content}>
@@ -14,7 +17,12 @@ const Login: Page = () => {
             <Button type={ButtonType.text} text={"Forgot Password?"}/>
         </div>
         <Button width={"100%"} type={ButtonType.primary} text={"Sign In"}/>
-        <Divider text={"or Sign In with"}></Divider>
+        <Divider text={"or sign in with"}></Divider>
+        <div className={styles.socialLinks}>
+            <Facebook className={styles.socialLink}/>
+            <Google className={styles.socialLink}/>
+        </div>
+
     </div>
 }
 
