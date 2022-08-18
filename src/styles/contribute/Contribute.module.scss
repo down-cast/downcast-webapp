@@ -1,0 +1,81 @@
+@use "src/styles/global/mixins/content";
+@use "src/styles/global/variables";
+
+.content {
+  @include content.pageContainer;
+  gap: 36px;
+  flex-direction: column;
+}
+
+.steps {
+  display: flex;
+  gap: 16px;
+  height: 465px;
+
+  .card {
+    background-color: var(--color-surface-1);
+    color: var(--color-on-surface);
+    border-radius: variables.$generalBorderRadius;
+    flex-grow: 1;
+
+    .cardHeader {
+      padding: 8px 24px;
+      border-radius: variables.$generalBorderRadius;
+      box-shadow: 0 2px 4px var(--color-shadow);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .cardNumber {
+        font-size: 64px;
+      }
+
+      &.primary {
+        background-color: var(--color-primary-container);
+        color: var(--color-on-primary-container);
+      }
+
+      &.secondary {
+        background-color: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+
+      &.tertiary {
+        background-color: var(--color-tertiary-container);
+        color: var(--color-on-tertiary-container);
+      }
+    }
+
+
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 48px;
+  width: 100%;
+  align-items: center;
+  background-color: var(--color-surface-1);
+  border-radius: variables.$generalBorderRadius;
+  height: 280px;
+
+  .headerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .subtitle {
+    margin: 0;
+  }
+
+  .logo {
+    color: var(--color-on-primary-container);
+    font-size: 160px;
+  }
+}

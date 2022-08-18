@@ -8,7 +8,7 @@ import {PasswordValidator} from "../../components/password-validator/PasswordVal
 import Facebook from "/public/assets/icons/social/facebook_round.svg";
 import Google from "/public/assets/icons/social/google.svg";
 
-const SignUp: Page = () => {
+export const SignUp: Page = () => {
     return <div className={styles.content}>
         <h3 className={classNames(styles.title, "headline2")}>Create Account</h3>
         <input className={styles.input} placeholder={"Email"}></input>

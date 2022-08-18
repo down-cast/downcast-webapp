@@ -2,7 +2,6 @@
 
 .content {
   @include content.pageContainer;
-  display: flex;
   gap: 36px;
 }
 
